@@ -1,0 +1,27 @@
+<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<body style='display:flex'>
+    <div id='input' style='width:50%'>
+    <textarea id='text' rows="10" cols="50"> </textarea>
+    </div>
+    <div id='output' style='border-left:1px solid black; min-height:500px'>
+    </div>
+    <script>
+        setInterval(function () {
+		$.ajax({
+			url: '/mk',
+			type: 'POST',
+                        data: { 'text': $('#text').val() },
+			success: function (data) {
+				console.log (data)
+            			if (data != '') {
+					$('#output').html(data)
+				}
+			}
+		})
+	}, 4000)
+    </script>
+</body>
+</html>
