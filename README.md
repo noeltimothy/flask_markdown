@@ -6,3 +6,8 @@ Simple Jquery AJAX calls flask backend every 4 seconds and spits out correspondi
 ## Here is a snapshot
 
 ![](./demo.png)
+
+
+## PlantUML demo
+
+![](./test.svg)
