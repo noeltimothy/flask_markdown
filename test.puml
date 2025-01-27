@@ -1,7 +1,4 @@
-@startjson
-{
-   "fruit":"Apple",
-   "size":"Large",
-   "color": ["Red", "Green"]
-}
-@endjson
+@startuml
+:Alice;
+:Bob;
+@enduml
